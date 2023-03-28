@@ -23,7 +23,6 @@ def search_api(query,pages=int(RESULT_COUNT/10)):    # if we have 30 results the
     res_df = pd.DataFrame.from_dict(results)
     res_df["rank"] = list(range(1,res_df.shape[0] + 1)) # Rank the results, it will get the ID from the search
     res_df = res_df[["link","rank","snippet","title"]]
-    
     return res_df
 
 # search_api("baby stroller")
